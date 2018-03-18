@@ -3,7 +3,25 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  
+  getValFromVariable(){
+    const  materials = [
+      'Hydrogen',
+      'Helium',
+      'Lithium',
+      'Beryllium'
+    ];
+    return materials;
+
+    // return ['Hydorgen','oxygen', 'lithum']
+    // return 'Hydrogen'
+  }
+  getVal(){
+    return ['Hydorgen','oxygen', 'lithum']
+  }
   render() {
+    var val = this.getValFromVariable();
+    var val2 = this.getVal();
     return (
       <div className="App">
         <header className="App-header">
@@ -13,9 +31,18 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <h1 className="My-dialoge">Hello React</h1>
+        <h2 className="My-dialoge-2">Learning React</h2>
+  
+        <p>{val.map(material => material.length).join(', ')}</p>
+        <p>{val.join(', ')}</p>
+        <p>{val2.map(x => x.length).join(', ')}</p>
+        <p>{val2.join(', ')}</p>
       </div>
     );
   }
 }
+
+
 
 export default App;
