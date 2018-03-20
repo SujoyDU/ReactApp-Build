@@ -9,7 +9,6 @@ class App extends Component {
     this.element= 'Atom';
   
   }
-  
   getValFromVariable(){
     let  materials = [
       'Hydrogen',
